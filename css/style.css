@@ -1,0 +1,237 @@
+
+/*Font */
+
+* {
+  font-family: "Josefin Sans", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/*Geral style*/
+
+body {
+  background-color:rgb(122, 122, 122);
+}
+
+
+
+main{
+  min-width: 640px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(0.5fr 2fr);
+  background-color:rgb(207, 207, 207);
+  background-image: 
+    linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px; /* Tamanho da célula da grade */
+  height: 90vh;
+
+
+}
+/* == Drag and drop elements layout ==*/
+.dragAndDrop {
+    max-width: 70%;
+    margin: auto;
+    box-shadow: 0px 2px 2px;
+    border: 1px solid #646464;
+}
+
+/*== Collapse layout == */
+.collapse{
+font-size: 30px;
+text-align: center;
+height:max-content;
+display: grid;
+padding: 12px;
+grid-template-columns: 10fr 1fr;
+}
+
+.collapseContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  grid-area: 2 / 1 / 3 / 3;
+  background-color: rgb(255, 252, 222);
+}
+
+.toggleButton {
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  color: antiquewhite;
+  background-color: black;
+}
+
+.collapseContent.expanded {
+  margin-top: 6px;
+  align-items: center;
+  justify-items:center;
+  font-size: 20px;
+  overflow: visible;
+  max-height:max-content;
+  border: #646464 solid 1px;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 0px 4px 10px;
+}
+
+
+#clock {
+  font-size: 35px;
+  height:40px;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #6793e4;
+  border-radius: 6px;
+}
+
+#waether {
+  background-color:#E4B067 ;
+}
+
+
+
+/*== TO DO LIST  == */
+#toDoList {
+  width: 90%;
+  margin-top: 1px;
+  background-color:#94D1B3 ;
+}
+
+#taskInput {
+  font-size: 22px;
+  margin: 10px 5px ;
+  border: 0.5px solid black;
+}
+
+#addTask{
+  width: 30px;
+  font-size: 25px;
+  border: 0.5px solid black;
+  background-color: rgb(133, 133, 133);
+}
+
+#addTask:hover{
+  color: antiquewhite;
+}
+
+#taskList li{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  background-color: #cccbcb;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+
+.taskLeft{
+  display: flex;
+  align-items:center;
+}
+.taskValue{
+ margin-inline: 5px;
+}
+.taskRight{
+  display: flex;
+  align-items: center;
+}
+
+
+.task-completed {
+  text-decoration: line-through; /* Riscar tarefas concluídas */
+  color: gray;
+}
+li button {
+  min-width: 25px;
+  min-height: 25px;
+  border: 0.5px solid black;
+}
+
+li button:hover{
+  background-color: #E4B067;
+}
+
+.conclusionTask {
+  border-radius: 50%;
+  justify-self: start;
+}
+.conclusionTask:hover{
+  background-color: #94D1B3;
+}
+
+
+
+
+
+
+/*==  STICKY NOTES LAYOUT== */
+
+#stickyNotes{
+  justify-content: space-between;
+  margin-top: 1px;
+  background-color: #D194A1;
+}
+
+.addSticky {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.addSticky button {
+  min-width: 10px;
+  width: 100%;
+  font-size: 30px;
+  border-radius: 10px;
+  border: solid 1px #868585;
+}
+
+.addSticky button:hover{
+  background-color: #868585;
+}
+
+
+
+.newNote {
+  min-width: 150px;
+  min-height: 100px;
+  border: 1px solid rgba(0, 0, 0, 0.562);
+  border-radius: 10px 0px 10px 10px;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px;
+}
+
+.newNote span {
+  align-self: flex-end;
+  color: rgb(0, 0, 0);
+
+}
+.newNote p {
+  max-width: 100%;
+}
+
+
+
+
+
+
+
+
+/* == Weather layout ==*/
+
+#weather-icon{
+    border-radius: 50%;
+    border:8px solid;
+    border-color: rgb(201, 181, 145);
+
+}
